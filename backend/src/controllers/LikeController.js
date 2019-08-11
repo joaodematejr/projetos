@@ -18,11 +18,9 @@ module.exports = {
 
       if (loggedSocket) {
         req.io.to(loggedSocket).emit("match", targetDev);
-        console.log("targetDev", targetDev);
       }
       if (targetSocket) {
         req.io.to(targetSocket).emit("match", loggerDev);
-        console.log("loggedSocket", loggerDev);
       }
     }
 
